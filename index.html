@@ -1,0 +1,159 @@
+<!DOCTYPE html>   <!-- Aqui determinamos el HTML:5 para que se adapte a cualquier navegador -->
+<html lang="es">  <!-- El lenguaje de la pagina será español -->
+
+<head>  <!-- Es la configuración de la página, esto no es visible para el usuario, sirve para configuraciones internas -->
+    <meta charset="UTF-8"><!-- UTF-8 LE PERMITIMOS A LA PAGINA MOSTRAR CORRECTAMENTE ACENTOS, EÑES Y SIMBOLOS ESPECIALES SIN QUE SE INTERRUMPA EL TEXTO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Hace que la pagina se adapte a cualquier dispositivo -->
+
+    <title>CPVweb | </title> <!-- Se define el titulo de la pagina -->
+
+    <link rel="stylesheet" href="style.css"> <!-- conectar el css  -->
+</head> <!-- Cerrar la configuracion  -->
+<body>
+    <!-- Contenedor principal que agrupa todo para centrarlo -->
+    <header class="contenedor-bienvenida">
+        <div class="bloque-identidad">
+            <img src="nuestro logo.png" alt="Logo de CTRL-PC" width="120" class="mi-logo">
+            <h1 class="titulo-principal"></h1>
+        </div>
+        
+        <!-- Fila superior: Buscador y botones de usuario -->
+        <div class="fila-superior">
+            <h2 class="texto-especialistas">Especialistas en PC'S</h2> 
+            
+            <!-- Buscador moderno unificado estilo cápsula -->
+            <form class="contenedor-busqueda">
+                <input type="text" id="input-busqueda" placeholder="Buscar laptops, componentes, marcas...">
+                <button type="submit" class="btn-lupa-sola">🔍</button>
+            </form>
+            
+            <button class="btn-carrito">Mi Carrito 🛒</button>
+            
+            <!-- Menú de Cuenta desplegable redondo -->
+            <details class="menu-cuenta">
+                <summary class="btn-usuario">
+                    Mi Cuenta
+                    <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="#d46b15" class="icono-monito">
+                        <path d="M12,2A5,5 0 0,0 7,7A5,5 0 0,0 12,12A5,5 0 0,0 17,7A5,5 0 0,0 12,2M12,14C7.58,14 4,15.79 4,18V20H20V18C20,15.79 16.42,14 12,14Z"/>
+                    </svg>
+                </summary>
+                <div class="desplegable-opciones">
+                    
+                    <!-- Submenu: Iniciar Sesión -->
+                    <details class="submenu-formulario sub-login">
+                        <summary class="opcion-enlace">Iniciar Sesión</summary>
+                        <div class="tarjeta-login">
+                            <h3 class="titulo-login">Iniciar Sesión</h3>
+                            
+                            <!-- Formulario con ID para JavaScript -->
+                            <form class="formulario-login" id="form-login">
+                                <div class="grupo-input">
+                                    <label>Correo Electrónico</label>
+                                    <input type="email" id="login-correo" placeholder="ejemplo@correo.com" required>
+                                </div>
+                                <div class="grupo-input">
+                                    <label>Contraseña</label>
+                                    <input type="password" id="login-password" placeholder="••••••••" required>
+                                </div>
+                                <button type="submit" class="btn-ingresar">Ingresar</button>
+                            </form>
+                            
+                        </div>
+                    </details>
+
+                    <!-- Submenu: Registrarse con sus id para JavaScript funcione -->
+                    <details class="submenu-formulario sub-registro">
+                        <summary class="opcion-enlace">Registrarse</summary>
+                        <div class="tarjeta-login">
+                            <h3 class="titulo-login">Crear Cuenta</h3>
+                            
+                            <form class="formulario-registro" id="form-registro">
+                                <div class="grupo-input">
+                                    <label>Nombre Completo</label>
+                                    <input type="text" id="registro-nombre" placeholder="Juan Pérez" required>
+                                </div>
+                                <div class="grupo-input">
+                                    <label>Correo Electrónico</label>
+                                    <input type="email" id="registro-correo" placeholder="ejemplo@correo.com" required>
+                                </div>
+                                <div class="grupo-input">
+                                    <label>Contraseña</label>
+                                    <input type="password" id="registro-password" placeholder="••••••••" required>
+                                </div>
+                                <div class="grupo-input">
+                                    <label>Confirmar Contraseña</label>
+                                    <input type="password" id="registro-confirmar-password" placeholder="••••••••" required>
+                                </div>
+                                <button type="submit" class="btn-registrar-alta">Darse de Alta</button>
+                            </form>
+                        </div>
+                    </details>
+                </div>
+            </details>
+        </div> 
+
+                <!-- Fila de abajo: Todos los enlaces de navegación validados con submenús al hacer clic -->
+        <nav class="barra-navegacion">
+            
+            <!-- 1. Botón: Inicio (Enlace directo tradicional) -->
+            <a href="#" class="enlace-directo">Inicio</a>
+
+            <!-- 2. Botón Desplegable: PC Tienda -->
+            <details class="contenedor-desplegable-clic">
+                <summary class="btn-nav-clic">PC Tienda ▾</summary>
+                <div class="contenido-desplegable-clic">
+                    <a href="#">Ubicación: Calle tecolote #123, Guadalajara</a>
+                    <a href="#">Horario: Lunes a Viernes 9am - 7pm, Sábado 10am - 5pm</a>
+                </div>
+            </details>
+
+            <!-- 3. Botón Desplegable: Productos -->
+            <details class="contenedor-desplegable-clic">
+                <summary class="btn-nav-clic">Productos ▾</summary>
+                <div class="contenido-desplegable-clic">
+                    <a href="#">Accesorios</a>
+                    
+                    <a href="#">Pc Gamer</a>
+                    <a href="#">Almacenamiento SSD</a>
+                    <a href="#">Laptops</a>
+
+                    <!-- Agregamos el ID a este enlace original -->
+                    <a href="#" id="enlace-pc-escritorio">Pc Escritorio</a>
+                    
+                    
+            </details>
+
+            <!-- 4. Botón Desplegable: Contacto -->
+            <details class="contenedor-desplegable-clic">
+                <summary class="btn-nav-clic">Contacto ▾</summary>
+                <div class="contenido-desplegable-clic">
+                    <a href="#">Soporte Técnico</a>
+                    <a href="#">Ing. Moises Delgado Cornejo</a>
+                    <a href="#">Tel: 33-38-08-14-35</a>
+                </div>
+            </details>
+            
+            <!-- 5. Botón Desplegable: Servicios -->
+            <details class="contenedor-desplegable-clic">
+                <summary class="btn-nav-clic">Servicios ▾</summary>
+                <div class="contenido-desplegable-clic">
+                    <a href="#">Ensamble Personalizado</a>
+                    <a href="#">Mantenimiento Preventivo</a>
+                    <a href="#">Instalación de Software</a>
+                    <a href="#">Garantías y Cambios</a>
+                </div>
+            </details>
+        </nav>
+
+    </header> 
+
+    <hr>
+    
+    <main class="contenedor-principal">
+        <!-- El cuerpo de la página se mantiene limpio para que no estorbe al menú -->
+    </main>
+
+    <!-- ENLACE EXTERNO A JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>

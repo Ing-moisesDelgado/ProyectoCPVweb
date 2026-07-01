@@ -1,0 +1,521 @@
+/* --- VARIABLES INSPIRADAS EN TU LOGO --- */
+:root {
+    --azul-logo: #15325c;       
+    --naranja-logo: #d46b15;    
+    --gris-laptop: #f1f3f5;     
+    --gris-oscuro: #212529;     
+    --radio-redondo: 50px;      
+}
+
+body {
+    background: linear-gradient(90deg, #0033ca, #ff8328);
+    margin: 0;
+    min-height: 100vh;         
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Estilos Generales del Menú */
+header {
+    background-color: var(--azul-logo);      
+    padding: 20px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bloque-identidad {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+/* Fuerza al texto a quedarse estrictamente en una sola línea horizontal */
+.texto-especialistas {
+    font-size: 24px;
+    margin: 0;
+    color: #ffffff;
+    font-weight: 500;
+    white-space: nowrap; /* ESTA LÍNEA EVITA EL SALTO DE RENGLÓN */
+}
+/* Fila Superior */
+.fila-superior {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 15px;           
+}
+
+header h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* --- BARRA DE BÚSQUEDA REDONDEADA --- */
+.contenedor-busqueda {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: var(--radio-redondo); 
+    overflow: hidden;                     
+    height: 42px;                        
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-grow: 1;        /* Permite que la barra use el espacio central */
+    max-width: 380px;    /* Limita el ancho máximo para dar aire a los botones derechos */
+}
+
+.contenedor-busqueda input {
+    height: 100%;
+    width: 100%;         /* Cambiado a 100% para que trabaje en conjunto con el tamaño de la cápsula */                       
+    padding: 0 20px;                     
+    font-size: 15px;
+    border: none;                        
+    outline: none;
+    background: transparent;
+    color: var(--gris-oscuro);
+}
+
+
+
+
+.btn-lupa-sola {
+    height: 100%;
+    background-color: var(--naranja-logo);  
+    border: none;                        
+    padding: 0 20px;                     
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    transition: background-color 0.2s;
+}
+
+.btn-lupa-sola:hover { background-color: #b35509; }
+
+/* --- BOTONES PREMIUM ESTILO CÁPSULA --- */
+.btn-carrito {
+    background-color: var(--naranja-logo);     
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 25px;                  
+    border: none;
+    border-radius: var(--radio-redondo); 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 42px;                        
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+}
+
+.btn-carrito:hover { background-color: #b35509; }
+
+.menu-cuenta { position: relative; display: inline-block; }
+
+.btn-usuario {
+    background-color: rgba(255, 255, 255, 0.15); 
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radio-redondo); 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 42px;                        
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.btn-usuario:hover { background-color: rgba(255, 255, 255, 0.25); }
+.menu-cuenta summary::-webkit-details-marker { display: none; }
+
+.icono-monito { flex-shrink: 0; }
+
+/* Caja desplegable flotante de opciones */
+.desplegable-opciones {
+    position: absolute;
+    right: 0;                   
+    top: 115%;                  
+    background-color: #ffffff;  
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px;         
+    z-index: 10;                
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+}
+
+.opcion-enlace {
+    color: #333333 !important;   
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    list-style: none;
+    display: block;
+}
+
+.opcion-enlace:hover {
+    background-color: #f1f1f1;
+    color: var(--naranja-logo) !important;
+}
+
+/* Fila Inferior */
+.barra-navegacion {
+    display: flex;
+    justify-content: flex-start;    
+    gap: 25px;                      
+    padding-top: 15px;
+    margin-top: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);  
+}
+
+.barra-navegacion a {
+    font-size: 16px;                
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.barra-navegacion a:hover { background-color: var(--naranja-logo); }
+hr { border: none; height: 1px; background-color: rgba(0,0,0,0.1); margin: 0; }
+
+
+/* --- FORMATO IDÉNTICO PARA AMBOS FORMULARIOS A UN COSTADO --- */
+.submenu-formulario {
+    position: relative;
+}
+
+.submenu-formulario summary::-webkit-details-marker { display: none; }
+
+/* Formato unificado: Ambas tarjetas tienen las mismas medidas y sombras exactas */
+.tarjeta-login {
+    position: absolute;
+    right: 105%; 
+    background-color: #ffffff;
+    width: 280px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    border: 1px solid #e0e0e0;
+}
+
+/* Alineaciones verticales perfectamente calibradas para que no se encima uno con otro */
+.sub-login .tarjeta-login { 
+    top: 0; 
+}
+
+.sub-registro .tarjeta-login { 
+    top: -85px; /* Se eleva un poco más para compensar la altura de sus inputs y calzar simétrico */
+}
+
+.titulo-login {
+    color: var(--azul-logo);
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.grupo-input {
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.grupo-input label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gris-oscuro);
+    margin-bottom: 4px;
+}
+
+/* Inputs idénticos en tamaño, relleno y redondeado cápsula */
+.grupo-input input {
+    width: 100%;
+    height: 36px;
+    padding: 0 12px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: var(--radio-redondo);
+    outline: none;
+    box-sizing: border-box;
+    color: var(--gris-oscuro);
+}
+
+.grupo-input input:focus { 
+    border-color: var(--azul-logo); 
+}
+
+/* Botones idénticos en altura, tamaño de fuente y comportamiento */
+.btn-ingresar, .btn-registrar-alta {
+    width: 100%;
+    height: 38px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--radio-redondo);
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-ingresar { background-color: var(--naranja-logo); }
+.btn-ingresar:hover { background-color: #b35509; }
+
+.btn-registrar-alta { background-color: var(--azul-logo); }
+.btn-registrar-alta:hover { background-color: #0d223f; }
+/* ==========================================================
+   ESTILOS DE LA BARRA DE NAVEGACIÓN DESPLEGABLE (CTRL-PC)
+   ========================================================== */
+
+/* Alineación horizontal uniforme para todos los botones */
+/* PEGA ESTO EN SU LUGAR: */
+.barra-navegacion {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.enlace-directo {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contenedor-desplegable-clic {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-nav-clic {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+.btn-nav-clic::-webkit-details-marker {
+    display: none;
+}
+
+.contenido-desplegable-clic {
+    position: absolute;
+    top: 100%; /* Cambiado para que aparezca exactamente debajo de la barra */
+    margin-top: 10px; /* Le da una pequeña separación elegante hacia abajo */
+    left: 0;
+    background-color: #ffffff; 
+    min-width: 280px; 
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    padding: 12px 16px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    border: 1px solid #e0e0e0;
+}
+
+
+.contenido-desplegable-clic a {
+    color: var(--gris-oscuro) !important;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+    transition: color 0.2s ease;
+}
+
+.contenido-desplegable-clic a:hover {
+    color: var(--naranja-logo) !important;
+}
+
+
+/* Estilos de cada opción interna del menú */
+.contenido-desplegable-clic a {
+    color: #333333 !important; /* Letras oscuras legibles */
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+}
+
+/* Efecto hover: cambia al pasar el mouse por las opciones internas */
+.contenido-desplegable-clic a:hover {
+    background-color: #f5f5f5;
+    color: #d46b15 !important; /* Tu color corporativo naranja */
+}
+
+
+/* ==========================================================================
+   ESTILOS PARA EL MARCO FLOTANTE DE PC ESCRITORIO
+   ========================================================================== */
+
+/* Fondo oscuro transparente de fondo para capturar el clic exterior */
+.modal-fondo-escritorio {
+    display: none; /* Empieza oculto */
+    position: fixed;
+    z-index: 99999; /* Por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+/* El marco o ventana flotante */
+.marco-blanco-computadoras {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    overflow: hidden; /* Mantiene los bordes de color limpios */
+    animation: ventanaEntrada 0.3s ease-out;
+}
+
+/* Línea superior Naranja */
+.barra-superior-naranja {
+    height: 15px;
+    background-color: #d46b15; /* Tu color naranja principal */
+    width: 100%;
+}
+
+/* Línea inferior Azul */
+.barra-inferior-azul {
+    height: 15px;
+    background-color: #0056b3; /* Color azul solicitado */
+    width: 100%;
+}
+
+/* Contenido interno del marco */
+.cuerpo-marco-computadoras {
+    padding: 30px;
+    max-height: 75vh;
+    overflow-y: auto; /* Permite deslizarse hacia abajo si hay muchas PCs */
+}
+
+.titulo-marco {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+/* Cuadrícula de las PCs de escritorio */
+.cuadracula-marco-pcs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjetas individuales dentro de la ventana flotante */
+.tarjeta-pc-escritorio {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta-pc-escritorio img {
+    max-width: 100%;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.marca-etiqueta {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tarjeta-pc-escritorio h4 {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #222;
+}
+
+.precio-normal {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Precio limpio sin formato de oferta o descuento */
+    margin: 10px 0;
+}
+
+.btn-agregar-marco {
+    background-color: #d46b15;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn-agregar-marco:hover {
+    background-color: #b5560f;
+}
+
+@keyframes ventanaEntrada {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ==========================================================================
+   ESTILOS PARA EL MARCO FLOTANTE DE PC TIENDA (MAPA)
+   ========================================================================== */
+
+.modal-fondo-tienda {
+    display: none; /* Empieza oculto */
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del mapa interactivo */
+.contenedor-mapa-frame {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+}
