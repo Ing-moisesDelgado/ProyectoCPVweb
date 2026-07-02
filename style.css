@@ -492,3 +492,25 @@ header {
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
 }
+
+/* Fuerza a los elementos del encabezado superior a alinearse horizontalmente */
+.fila-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: nowrap; /* Impide que los botones se bajen de renglón */
+}
+
+/* Contenedor que agrupa y pega Mi Carrito con Mi Cuenta */
+.bloque-acciones-usuario {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Separación milimétrica entre el carrito y la cuenta */
+}
+
+/* Normaliza el comportamiento del menú desplegable nativo */
+.menu-cuenta {
+    display: inline-block;
+    position: relative;
+}
