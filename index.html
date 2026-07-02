@@ -1,23 +1,31 @@
-<!DOCTYPE html>   <!-- Aqui determinamos el HTML:5 para que se adapte a cualquier navegador -->
-<html lang="es">  <!-- El lenguaje de la pagina será español -->
+<!DOCTYPE html>   
+<!-- ========================================================== -->
+<!-- PANTALLA 1: CONFIGURACIÓN INTERNA Y METADATOS              -->
+<!-- ========================================================== -->
+<html lang="es">  
 
-<head>  <!-- Es la configuración de la página, esto no es visible para el usuario, sirve para configuraciones internas -->
-    <meta charset="UTF-8"><!-- UTF-8 LE PERMITIMOS A LA PAGINA MOSTRAR CORRECTAMENTE ACENTOS, EÑES Y SIMBOLOS ESPECIALES SIN QUE SE INTERRUMPA EL TEXTO -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Hace que la pagina se adapte a cualquier dispositivo -->
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CPVweb | </title> <!-- Se define el titulo de la pagina -->
+    <title>CPVweb | Especialistas en PC'S</title> 
 
-    <link rel="stylesheet" href="style.css"> <!-- conectar el css  -->
-</head> <!-- Cerrar la configuracion  -->
+    <!-- Conexión obligatoria con el archivo de diseño CSS -->
+    <link rel="stylesheet" href="style.css"> 
+</head> 
 <body>
-    <!-- Contenedor principal que agrupa todo para centrarlo -->
+
+<!-- ========================================================== -->
+<!-- PANTALLA 2: ENCABEZADO E IDENTIDAD CORPORATIVA             -->
+<!-- ========================================================== -->
     <header class="contenedor-bienvenida">
+        <!-- Bloque del logotipo principal -->
         <div class="bloque-identidad">
             <img src="nuestro-logo.png" alt="Logo de CTRL-PC" width="120" class="mi-logo">
-            <h1 class="titulo-principal"></h1>
+            <h1 class="titulo-principal">CTRL-PC</h1>
         </div>
         
-        <!-- Fila superior: Buscador y botones de usuario -->
+        <!-- Fila superior: Buscador y botones rápidos -->
         <div class="fila-superior">
             <h2 class="texto-especialistas">Especialistas en PC'S</h2> 
             
@@ -27,9 +35,13 @@
                 <button type="submit" class="btn-lupa-sola">🔍</button>
             </form>
             
+            <!-- Botón de acceso al carrito -->
             <button class="btn-carrito">Mi Carrito 🛒</button>
-            
-            <!-- Menú de Cuenta desplegable redondo -->
+
+        </div>
+        <!-- ========================================================== -->
+<!-- PANTALLA 3: MENÚ DE USUARIO Y FORMULARIOS FLOTANTES        -->
+<!-- ========================================================== -->
             <details class="menu-cuenta">
                 <summary class="btn-usuario">
                     Mi Cuenta
@@ -37,15 +49,13 @@
                         <path d="M12,2A5,5 0 0,0 7,7A5,5 0 0,0 12,12A5,5 0 0,0 17,7A5,5 0 0,0 12,2M12,14C7.58,14 4,15.79 4,18V20H20V18C20,15.79 16.42,14 12,14Z"/>
                     </svg>
                 </summary>
+                
                 <div class="desplegable-opciones">
-                    
-                    <!-- Submenu: Iniciar Sesión -->
+                    <!-- Submenú flotante: Formulario de Iniciar Sesión -->
                     <details class="submenu-formulario sub-login">
                         <summary class="opcion-enlace">Iniciar Sesión</summary>
                         <div class="tarjeta-login">
                             <h3 class="titulo-login">Iniciar Sesión</h3>
-                            
-                            <!-- Formulario con ID para JavaScript -->
                             <form class="formulario-login" id="form-login">
                                 <div class="grupo-input">
                                     <label>Correo Electrónico</label>
@@ -57,16 +67,14 @@
                                 </div>
                                 <button type="submit" class="btn-ingresar">Ingresar</button>
                             </form>
-                            
                         </div>
                     </details>
 
-                    <!-- Submenu: Registrarse con sus id para JavaScript funcione -->
+                    <!-- Submenú flotante: Formulario de Registro -->
                     <details class="submenu-formulario sub-registro">
                         <summary class="opcion-enlace">Registrarse</summary>
                         <div class="tarjeta-login">
                             <h3 class="titulo-login">Crear Cuenta</h3>
-                            
                             <form class="formulario-registro" id="form-registro">
                                 <div class="grupo-input">
                                     <label>Nombre Completo</label>
@@ -92,13 +100,13 @@
             </details>
         </div> 
 
-                <!-- Fila de abajo: Todos los enlaces de navegación validados con submenús al hacer clic -->
+        <!-- ========================================================== -->
+<!-- PANTALLA 4: BARRA DE NAVEGACIÓN Y CIERRE DEL SITIO         -->
+<!-- ========================================================== -->
         <nav class="barra-navegacion">
-            
-            <!-- 1. Botón: Inicio (Enlace directo tradicional) -->
             <a href="#" class="enlace-directo">Inicio</a>
 
-            <!-- 2. Botón Desplegable: PC Tienda -->
+            <!-- Desplegable: PC Tienda -->
             <details class="contenedor-desplegable-clic">
                 <summary class="btn-nav-clic">PC Tienda ▾</summary>
                 <div class="contenido-desplegable-clic">
@@ -107,23 +115,19 @@
                 </div>
             </details>
 
-            <!-- 3. Botón Desplegable: Productos -->
+            <!-- Desplegable: Catálogo de Productos -->
             <details class="contenedor-desplegable-clic">
                 <summary class="btn-nav-clic">Productos ▾</summary>
                 <div class="contenido-desplegable-clic">
                     <a href="#">Accesorios</a>
-                    
                     <a href="#">Pc Gamer</a>
                     <a href="#">Almacenamiento SSD</a>
                     <a href="#">Laptops</a>
-
-                    <!-- Agregamos el ID a este enlace original -->
                     <a href="#" id="enlace-pc-escritorio">Pc Escritorio</a>
-                    
-                    
+                </div>
             </details>
 
-            <!-- 4. Botón Desplegable: Contacto -->
+            <!-- Desplegable: Datos de Contacto -->
             <details class="contenedor-desplegable-clic">
                 <summary class="btn-nav-clic">Contacto ▾</summary>
                 <div class="contenido-desplegable-clic">
@@ -133,27 +137,26 @@
                 </div>
             </details>
             
-            <!-- 5. Botón Desplegable: Servicios -->
+            <!-- Desplegable: Módulo de Servicios -->
             <details class="contenedor-desplegable-clic">
                 <summary class="btn-nav-clic">Servicios ▾</summary>
                 <div class="contenido-desplegable-clic">
+                    <a href="#" id="enlace-mantenimiento">Mantenimiento Preventivo</a>
                     <a href="#">Ensamble Personalizado</a>
-                    <a href="#">Mantenimiento Preventivo</a>
                     <a href="#">Instalación de Software</a>
                     <a href="#">Garantías y Cambios</a>
                 </div>
             </details>
         </nav>
-
     </header> 
 
     <hr>
     
-    <main class="contenedor-principal">
-        <!-- El cuerpo de la página se mantiene limpio para que no estorbe al menú -->
-    </main>
+    <!-- Sección principal para inyectar contenido futuro -->
+    <main class="contenedor-principal"></main>
 
-    <!-- ENLACE EXTERNO A JAVASCRIPT -->
+    <!-- Enlace con la lógica JavaScript externa -->
     <script src="script.js"></script>
 </body>
 </html>
+
